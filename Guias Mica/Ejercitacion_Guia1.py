@@ -111,6 +111,7 @@ for i in range(0,6):
 '''
 # 15) NO ME SALEN LAS LINEAS PUNTEADAS CADA 5 SI ES MULTIPLO DE 4. Crear un programa que escriba los números del 1 al 500, y que indique cuales son múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal.
 
+#\n es un salto de página, si lo ponés en el divisor de 5 te queda como lo pide el ejercicio.
 for i in range(1,501):
     
     if i%4==0:

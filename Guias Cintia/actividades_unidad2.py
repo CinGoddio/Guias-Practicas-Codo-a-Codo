@@ -9,7 +9,7 @@ función y mostrar el máximo hallado, o un mensaje informativo si éste no exis
 # def mayor_de_tres(num1, num2, num3):
 #      if num1 > num2 >= num3:
 #          rta = num1
-#      elif num1 > num2 >= num3:
+#      elif num1 > num3 >= num2:
 #          rta = num1
 #      elif num2 > num1 >= num3:
 #          rta = num2
