@@ -34,7 +34,25 @@ función y mostrar el máximo hallado, o un mensaje informativo si éste no exis
 '''2)Desarrollar una función que reciba tres números enteros positivos y verifique si corresponden a una 
 fecha válida (día, mes, año). Devolver True o False según la fecha sea correcta o no. Realizar también un 
 programa para verificar el comportamiento de la función.'''
-#No lo intenté
+
+# num1= int(input("Ingrese un número entero positivo:"))
+# num2= int(input("Ingrese un número entero positivo:"))
+# num3= int(input("Ingrese un número entero positivo:"))
+
+# def fecha_valida(num1, num2, num3):
+#     if (31 >= num1 >=1) and (num2==1 or num2==3 or num2==5 or num2==7 or num2==8 or num2==10 or num2==12) and (2022 >= num3 >=1):
+#         rta = 'Fecha válida'
+#     elif (30 >= num1 >=1) and (num2==4 or num2==6 or num2==9 or num2==11) and (2022 >= num3 >=1):
+#         rta = 'Fecha válida'
+#     elif (28 >= num1 >=1) and (num2==2) and (2022 >= num3 >=1):
+#         rta = 'Fecha válida'
+#     else: 
+#         rta = 'Fecha no válida'
+#     return rta  
+
+# #PROGRAMA PRINCIPAL
+
+# print(fecha_valida(num1, num2, num3))
 
 '''3)Un comercio de electrodomésticos necesita para su línea de cajas un programa que le indique al cajero 
 el cambio que debe entregarle al cliente. Para eso se ingresan dos números enteros, correspondientes al total 
@@ -136,27 +154,61 @@ original, la lista de palabras a eliminar y la lista resultante.'''
 ordenada en forma ascendente o False en caso contrario. Por ejemplo, ordenada([1, 2, 3]) retorna 
 True y ordenada(['b', 'a']) retorna False. Desarrollar además un programa para verificar el 
 comportamiento de la función.'''
+'''SIEMPRE DA FALSO'''
 #FUNCIÓN
 # def lista_ordenada(lista):
-#     if lista == lista.sort(): #return lista == lista.sort() es una alternativa más simple
+#No funciona porque el lista.sort() no puede asignarse al comparativo y hacerlo ejecutar la 
+# función, se debe primero hacer ejecutar la función y luego asignarlo al compartaivo como lo hice más abajo
+#     if lista==lista.sort(): #return lista == lista.sort() es una alternativa más simple
 #         rta = True
 #     else:
 #         rta = False
-#         return rta
+#     return rta
+
+#Otra forma...FUNCIONA
+def lista_ordenada(lista):
+    ordenada = sorted(lista)
+    return lista == ordenada #return true if lista == ordenada; otherwise return false
+
 
 # #PROGRAMA PRINCIPAL
-# lista = [4, 2, 3, 1]
-# print(lista_ordenada(lista))
-'''NO FUNCIONA, SIEMPRE RETORNA FALSE'''
+lista = [2, 3, 5]
+print(lista_ordenada(lista))
+
 
 '''10)Desarrollar una función que determine si una cadena de caracteres es capicúa, sin utilizar cadenas 
 auxiliares ni rebanadas. Escribir además un programa que permita verificar su funcionamiento.'''
+
+# def es_capicua(cadena):
+#     for i in range(len(cadena)-1):
+#         if cadena[i] == cadena[-1-i]:
+#             rta = True
+#         else:
+#             rta = False
+#         return rta
+
+# #PROGRAMA PRINCIPAL
+
+# cadena = 'anana'
+# print(cadena[-2])
+# print(es_capicua(cadena))
+
 '''11)Leer una cadena de caracteres e imprimirla centrada en pantalla. Suponer que la misma tiene 80 columnas.'''
+#FUNCIÓN
+# def cadena_centrada(cadena):
+#     longitud = len(cadena)
+#     caracteres_al_comienzo = int((80 - longitud)/2)
+#     print(" "*caracteres_al_comienzo, cadena)
+
+# #PROGRAMA PRINCIPAL
+# cadena = input('Ingrese una cadena de caracteres:')
+# cadena_centrada(cadena)
 
 '''12)Escribir una función que reciba como parámetro una tupla conteniendo una fecha (día,mes,año) y devuelva 
 una cadena de caracteres con la misma fecha expresada en formato extendido. Por ejemplo, para (12, 10,17) 
 devuelve “12 de Octubre de 2017”. Escribir también un programa para verificar su comportamiento.'''
-# #FUNCIÓN
+#FUNCIÓN
+#Funciona pero no cumple la consigna de usar TUPLA. HECHO DE MANERA CORRECA MÁS ABAJO
 # def fecha_extendida(dia, mes, anio):
 #     if mes==1:
 #         rta = f'{dia} de Enero de {anio}'
@@ -182,12 +234,54 @@ devuelve “12 de Octubre de 2017”. Escribir también un programa para verific
 #         rta = f'{dia} de Noviembre de {anio}'
 #     elif mes==12:
 #         rta = f'{dia} de Diciembre de {anio}'
-#         return rta
+#     return rta
+
 # #PROGRAMA PRINCIPAL
 # dia = 16
 # mes = 11
 # anio = 2022
 # print(fecha_extendida(dia, mes, anio))
-'''NO FUNCIONA'''
+
+#Forma CORRECTA:
+# def fecha_extendida2(tupla):
+#     dia, mes, anio = tupla
+#     if mes==1:
+#         rta = 'Enero'
+#     elif mes==2:
+#         rta = 'Febrero'
+#     elif mes==3:
+#         rta = 'Marzo'
+#     elif mes==4:
+#         rta = 'Abril'
+#     elif mes==5:
+#         rta = 'Mayo'
+#     elif mes==6:
+#         rta = 'Junio'
+#     elif mes==7:
+#         rta = 'Julio'  #y así seguimos...
+#     return f'{dia} de {rta} de {anio}'
+
+# #PROGRAMA PRINCIPAL
+
+# tupla = (17, 11, 1983)
+# print(fecha_extendida2(tupla))
+
 '''13)Ingresar una frase desde el teclado y usar un conjunto para eliminar las palabras repetidas, 
 dejando un solo ejemplar de cada una. Finalmente mostrar las palabras ordenadas según su longitud.'''
+
+# frase_ingresada = input('Ingrese una frase: ')
+# lista = frase_ingresada.split()
+# conjunto = (set(lista))
+# lista_sin_repetir = list(conjunto)
+# lista_sin_repetir.sort(key=len)
+
+# # print(frase_ingresada)
+# # print(lista)
+# # print(conjunto)
+# print(lista_sin_repetir)
+
+'''14) Desarrollar una función eliminar_claves() que reciba como parámetros un diccionario y una lista 
+de claves. La función debe eliminar del diccionario todas las claves contenidas en la lista, devolviendo 
+el diccionario modificado y un valor de verdad que indique si la operación fue exitosa. Desarrollar también 
+un programa para verificar su comportamiento.'''
+'''SEGUIR'''

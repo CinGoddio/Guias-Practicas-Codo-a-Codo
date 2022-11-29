@@ -16,22 +16,34 @@ class Coche(Vehiculo):
         Vehiculo.__init__(self, color, ruedas)
         self.velocidad = velocidad
         self.cilindrada = cilindrada
+    
+    def agregar_vehiculos(self, vehic):
+        super().append(vehic)
 
 class Camioneta(Vehiculo):
     def __init__(self, color, ruedas, carga):
         Vehiculo.__init__(self, color, ruedas)
         self.carga = carga
 
+    def agregar_vehiculos(self, vehic):
+        super().append(vehic)
+
 class Bicicleta(Vehiculo):
     def __init__(self, color, ruedas, tipo):
         Vehiculo.__init__(self, color, ruedas)
         self.tipo = tipo
+
+    def agregar_vehiculos(self, vehic):
+        super().append(vehic)
 
 class Motocicleta(Vehiculo):
     def __init__(self, color, ruedas, velocidad, cilindrada):
         Vehiculo.__init__(self, color, ruedas)
         self.velocidad = velocidad
         self.cilindrada = cilindrada
+
+    def agregar_vehiculos(self, vehic):
+        super().append(vehic)
 
 #PROGRAMA PRINCIPAL
 coche1 = Coche('Rojo',4, '120 k/h', '800 cc')
@@ -41,7 +53,7 @@ motocicleta1 = Motocicleta('Blanca', 2, '50 k/h', '100 cc')
 
 print(coche1)
 '''NO FUNCIONA LA FUNCIÓN agregar_vehiculos'''
-# Vehiculo.agregar_vehiculos(coche1)
+#Coche.agregar_vehiculos(coche1)
 # Vehiculo.agregar_vehiculos(camioneta1)
 # Vehiculo.agregar_vehiculos(bicicleta1)
 # Vehiculo.agregar_vehiculos(Vmotocicleta1)

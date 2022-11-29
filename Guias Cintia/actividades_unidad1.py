@@ -92,12 +92,13 @@ por los que es divisible)'''
 #    print("El número ingresado no es divisible ni por 2, ni por 3, ni por 5 ni por 7")
 
 '''10)Escribir un programa que escriba en pantalla los divisores de un número dado'''
-# num1 = int(input("Ingrese un número:"))
-# cont=1
-# while cont<=num1:
-#     if num1%cont==0:
-#         print(num1,"Es divisible por:",cont)
-#     cont=cont+1
+
+# num1 = int(input('Ingrese un número:'))
+# cont = 1
+# while cont <= num1:
+#     if num1%cont == 0:
+#         print(num1, 'es divisible por', cont)
+#         cont = cont + 1
 
 '''11)NO ME SALE!!! Escribir un programa que nos diga si un número dado es primo (no es divisible por ninguno otro número 
 que no sea él mismo o la unidad)'''

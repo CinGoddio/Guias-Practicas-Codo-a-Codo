@@ -72,7 +72,7 @@ y “print_persona”. Luego crear dos objetos del tipo Persona e imprimirlos po
 # print(persona1)
 # print(persona1.es_mayor_de_edad())
 
-'''¿Por qué puedo modificar y consultoar los artivutos como siguen si los puse provados? ESTUDIAR!!!!'''
+'''¿Por qué puedo modificar y consultoar los artibutos como siguen si los puse probados? ESTUDIAR!!!!'''
 # persona1.edad = 38
 # print(persona1.nombre)
 
@@ -188,7 +188,7 @@ y “print_persona”. Luego crear dos objetos del tipo Persona e imprimirlos po
 
 '''6) Realizar un programa que conste de una clase llamada Alumno que tenga como atributos el nombre y la nota 
 del alumno. Definir los métodos para inicializar sus atributos, imprimirlos y mostrar un mensaje con el resultado 
-de la nota y si ha aprobado o no.´'''
+de la nota y si ha aprobado o no.'''
 # class Alumno:
 #     def __init__(self, nombre, nota):
 #         self.nombre = nombre
