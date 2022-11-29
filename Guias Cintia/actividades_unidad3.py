@@ -3,27 +3,27 @@
 '''1)Crear la clase Persona con los métodos “set_nombre”, “set_edad”, “get_nombre”, “get_edad” 
 y “print_persona”. Luego crear dos objetos del tipo Persona e imprimirlos por consola.'''
 
-'''Creo que no es exactamente lo que piden pero no entiendo qué tenemos que hacer'''
+'''NO FUNCIONA. Creo que no es exactamente lo que piden pero no entiendo qué tenemos que hacer. '''
 # class Persona:
 
 #     @property             #Getter
 #     def nombre(self):
-#         return self.nombre
+#         return self.__nombre
 
 #     @property             #Getter
 #     def edad(self):
-#         return self.edad
+#         return self.__edad
     
 #     @nombre.setter        #Setter
 #     def nombre(self, nombre):
-#         self.nombre=nombre 
+#         self.__nombre=nombre 
     
 #     @edad.setter        #Setter
 #     def edad(self, edad):
-#         self.edad=edad 
+#         self.__edad=edad 
     
 #     def __str__(self):
-#         return f'{self.nombre} tiene {self.edad} años.'
+#         return f'{self.__nombre} tiene {self.__edad} años.'
 
 
 # #PROGRAMA PRINCIPAL
@@ -35,7 +35,7 @@ y “print_persona”. Luego crear dos objetos del tipo Persona e imprimirlos po
 
 '''2) Agregarle a la clase anterior un constructor que reciba nombre y edad.
 3) Agregarle a la clase anterior un método “es_mayor_de_edad” que devuelva True o False.'''
-
+'''no termino de entedner la función del los guiones para hacer privados los atributos ya que si los consulto, los puedo ver'''
 # class Persona:
 
 # #Ejercicio 2
@@ -66,12 +66,15 @@ y “print_persona”. Luego crear dos objetos del tipo Persona e imprimirlos po
 #     def es_mayor_de_edad(self):
 #         return self.__edad >= 18  #retorna true si se cumple la condición
 
-
 # #PROGRAMA PRINCIPAL
 
 # persona1 = Persona("Cintia", 39)
 # print(persona1)
 # print(persona1.es_mayor_de_edad())
+
+'''¿Por qué puedo modificar y consultoar los artivutos como siguen si los puse provados? ESTUDIAR!!!!'''
+# persona1.edad = 38
+# print(persona1.nombre)
 
 '''4) Agregarle un método “es_mayor_que” el cual recibe un objeto persona y compara su edad con la del objeto actual.'''
 # class Persona:
@@ -255,11 +258,93 @@ inicializar los atributos, imprimir el valor del lado con un tamaño mayor y el 
 # triangulo1 = Triangulo(lado1, lado2, lado3)
 # print(triangulo1)
 
-'''SEGUIR'''
 '''8)Realizar un programa en el cual se declaren dos valores enteros por teclado utilizando el 
 método __init__. Calcular después la suma, resta, multiplicación y división. Utilizar un método para cada una 
 e imprimir los resultados obtenidos. Llamar a la clase Calculadora.'''
+# class Calculadora:
+#     def __init__(self, num1, num2):
+#         self.num1 = num1
+#         self.num2 = num2
 
+#     def suma(self):
+#         suma = self.num1 + self.num2
+#         return suma
+
+#     def resta(self):
+#         resta = self.num1 - self.num2
+#         return resta
+
+#     def multiplicacion(self):
+#         mult = self.num1 * self.num2
+#         return mult
+
+#     def division(self):
+#         div = self.num1 // self.num2
+#         return div
+    
+#     def __str__(self):
+#         return f'Suma: {self.suma()}; \nResta: {self.resta()}; \nMultiplicación: {self.multiplicacion()}; \nDivisión: {self.division()}'
+
+# # PROGRAMA PRINCIPAL
+
+# num1 = int(input('Ingrese un número entero:'))
+# num2 = int(input('Ingrese otro número entero:'))
+
+# print(Calculadora(num1, num2))
+
+'''SEGUIR'''
+'''9) Realizar una clase que administre una agenda. Se debe almacenar para cada contacto el nombre, el teléfono 
+y el email. Además deberá mostrar un menú con las siguientes opciones: Añadir contacto, Listar contactos, Buscar 
+contacto, Editar contacto, Cerrar agenda.'''
+class Agenda:
+
+    def __init__(self, nombre, telefono, email):
+        self.nombre = nombre
+        self.telefono = telefono
+        self.email = email
+
+#No entiendo por qué no funciona este while...debería acabar el ciclo cuando el nombre es vacio pero no lo hace
+    
+    def anadir_contacto(self):   
+        lista_contactos = []
+        nom = input ('Ingrese el Nombre: ')
+        while nom != ' ':
+            tel = input ('Ingrese el Teléfono: ')
+            email = input ('Ingrese el E-mail: ')
+            contacto = Agenda(nom, tel, email)
+            lista_contactos.append(contacto)
+            nom = input ('Ingrese el Nombre: ')
+            return lista_contactos 
+    
+    def listar_contactos(self, lista_contactos):
+        for contacto in lista_contactos:
+            print(contacto)
+        
+    def buscar_contacto(self, lista_contactos):
+        for contacto in lista_contactos:
+            if contacto == lista_contactos.nom:
+                print('lista_contacto.tel', 'lista_contacto.email')
+
+    def editar_contacto(self):
+        pass
+
+    def cerrar_agenda(self):
+        pass
+
+# PROGRAMA PRINCIPAL
+
+contacto1 = Agenda('Cintia', 3562408801, 'cintiagoddio@gmail.com')
+Agenda.anadir_contacto(contacto2)
+
+'''10) En un banco tienen clientes que pueden hacer depósitos y extracciones de dinero. El banco requiere también 
+al final del día calcular la cantidad de dinero que se ha depositado. Se deberán crear dos clases, la clase cliente 
+y la clase banco. La clase cliente tendrá los atributos nombre y cantidad y los métodos __init__, depositar, 
+extraer, mostrar_total. La clase banco tendrá como atributos 3 objetos de la clase cliente y los métodos __init__, 
+operar y deposito_total.'''
+# class Clientes:
+
+#     def __init__(self, nombre, cantidad):
+#         self.nombre = nombre
 
 
  
