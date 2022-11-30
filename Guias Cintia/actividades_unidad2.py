@@ -166,15 +166,14 @@ comportamiento de la función.'''
 #     return rta
 
 #Otra forma...FUNCIONA
-def lista_ordenada(lista):
-    ordenada = sorted(lista)
-    return lista == ordenada #return true if lista == ordenada; otherwise return false
+# def lista_ordenada(lista):
+#     ordenada = sorted(lista)
+#     return lista == ordenada #return true if lista == ordenada; otherwise return false
 
 
-# #PROGRAMA PRINCIPAL
-lista = [2, 3, 5]
-print(lista_ordenada(lista))
-
+# # #PROGRAMA PRINCIPAL
+# lista = [2, 3, 5]
+# print(lista_ordenada(lista))
 
 '''10)Desarrollar una función que determine si una cadena de caracteres es capicúa, sin utilizar cadenas 
 auxiliares ni rebanadas. Escribir además un programa que permita verificar su funcionamiento.'''
@@ -284,4 +283,33 @@ dejando un solo ejemplar de cada una. Finalmente mostrar las palabras ordenadas 
 de claves. La función debe eliminar del diccionario todas las claves contenidas en la lista, devolviendo 
 el diccionario modificado y un valor de verdad que indique si la operación fue exitosa. Desarrollar también 
 un programa para verificar su comportamiento.'''
-'''SEGUIR'''
+
+# #FUNCIÓN
+# def eliminar_claves(diccionario, lista):
+#     for elem in lista:
+#         diccionario.pop(elem)
+#     return print('La operación fue exitosa', '\n', diccionario)
+
+# #PROGRAMA PRINCIPAL
+# diccionario = {1:'Lunes', 2:'Martes', 3:'Miércoles', 4:'Jueves', 5:'Viernes', 6:'Sábado', 7:'Domingo'}
+# lista_claves_a_eliminar = [1, 2]
+
+# eliminar_claves(diccionario, lista_claves_a_eliminar)
+
+'''15) NO FUNCIONA Escribir una función para eliminar una subcadena de una cadena de caracteres, a partir de una posición 
+y cantidad de caracteres dados, devolviendo la cadena resultante. Escribir también un programa para verificar el 
+comportamiento de la misma. Escribir una función utilizando rebanadas.'''
+#FUNCIÓN
+def eliminar_subcadena(cadena, posic_inicial, cant_caracteres):
+    subcadena = slice(posic_inicial, posic_inicial+cant_caracteres)
+    print(cadena[subcadena])
+    return cadena.strip(subcadena)
+
+# #PROGRAMA PRINCIPAL
+cadena = 'Cintia'
+posic_inicial = 2
+cant_caracteres = 1
+print(eliminar_subcadena(cadena, posic_inicial, cant_caracteres))
+
+
+

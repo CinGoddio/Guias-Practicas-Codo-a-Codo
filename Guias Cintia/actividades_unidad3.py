@@ -292,59 +292,6 @@ e imprimir los resultados obtenidos. Llamar a la clase Calculadora.'''
 
 # print(Calculadora(num1, num2))
 
-'''SEGUIR'''
-'''9) Realizar una clase que administre una agenda. Se debe almacenar para cada contacto el nombre, el teléfono 
-y el email. Además deberá mostrar un menú con las siguientes opciones: Añadir contacto, Listar contactos, Buscar 
-contacto, Editar contacto, Cerrar agenda.'''
-class Agenda:
-
-    def __init__(self, nombre, telefono, email):
-        self.nombre = nombre
-        self.telefono = telefono
-        self.email = email
-
-#No entiendo por qué no funciona este while...debería acabar el ciclo cuando el nombre es vacio pero no lo hace
-    
-    def anadir_contacto(self):   
-        lista_contactos = []
-        nom = input ('Ingrese el Nombre: ')
-        while nom != ' ':
-            tel = input ('Ingrese el Teléfono: ')
-            email = input ('Ingrese el E-mail: ')
-            contacto = Agenda(nom, tel, email)
-            lista_contactos.append(contacto)
-            nom = input ('Ingrese el Nombre: ')
-            return lista_contactos 
-    
-    def listar_contactos(self, lista_contactos):
-        for contacto in lista_contactos:
-            print(contacto)
-        
-    def buscar_contacto(self, lista_contactos):
-        for contacto in lista_contactos:
-            if contacto == lista_contactos.nom:
-                print('lista_contacto.tel', 'lista_contacto.email')
-
-    def editar_contacto(self):
-        pass
-
-    def cerrar_agenda(self):
-        pass
-
-# PROGRAMA PRINCIPAL
-
-contacto1 = Agenda('Cintia', 3562408801, 'cintiagoddio@gmail.com')
-Agenda.anadir_contacto(contacto2)
-
-'''10) En un banco tienen clientes que pueden hacer depósitos y extracciones de dinero. El banco requiere también 
-al final del día calcular la cantidad de dinero que se ha depositado. Se deberán crear dos clases, la clase cliente 
-y la clase banco. La clase cliente tendrá los atributos nombre y cantidad y los métodos __init__, depositar, 
-extraer, mostrar_total. La clase banco tendrá como atributos 3 objetos de la clase cliente y los métodos __init__, 
-operar y deposito_total.'''
-# class Clientes:
-
-#     def __init__(self, nombre, cantidad):
-#         self.nombre = nombre
-
+'''Los ejercicios 9 y 10 están en carpetas aparte'''
 
  
