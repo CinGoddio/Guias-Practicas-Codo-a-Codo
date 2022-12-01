@@ -294,4 +294,51 @@ e imprimir los resultados obtenidos. Llamar a la clase Calculadora.'''
 
 '''Los ejercicios 9 y 10 están en carpetas aparte'''
 
+'''Practicando con ejemplos de los pdfs de las clases'''
+
+'''Se implementa una clase llamada Alumno, que posee un atributo de clase (nro_alumnos) que lleva la cuenta de 
+los objetos instanciados.
+● Cada objeto posee un nombre y una nota.
+● Se definen métodos para inicializar sus atributos, imprimir el estado del objeto,
+procesar su eliminación de la memoria y para mostrar un texto con su estado.
+El estado es “regular” (nota menor o igual a 4), “bueno” (nota mayor a 4 y
+menor que 9) o “excelente” (nota mayor que 9).
+● En el programa principal se instancian dos objetos de la clase Alumno y se
+muestran algunas de sus características. Al salir del programa se ve como son
+eliminados de la memoria.'''
+
+# class Alumno:
+#     cant_alumnos = 0
+
+#     def __init__(self, nombre, nota):
+#         self.nombre = nombre
+#         self.nota = nota
+#         Alumno.cant_alumnos += 1
+
+#     def __str__(self):
+#         return f'El alumno {self.nombre} tiene una nota de {self.nota}'
+    
+#     def __del__(self):
+#         Alumno.cant_alumnos -= 1
+#         return print(f'El alumno fue eliminado. Quedan {Alumno.cant_alumnos} legajos existentes.')
+
+#     def estado(self):
+#         if self.nota <= 4:
+#             rta = 'regular'
+#         elif 4 < self.nota < 9:
+#             rta = 'bueno'
+#         else:
+#             rta = 'excelente'
+#         return print(f'El estado de {self.nombre} es {rta}')
+
+# #PROGRAMA PRINCIPAL
+# alumno1 = Alumno('Cintia', 9)
+# alumno2 = Alumno('Juan', 9)
+# print(alumno1)
+# print(Alumno.cant_alumnos)
+# alumno1.estado()
+# del alumno1
+
+
+
  
