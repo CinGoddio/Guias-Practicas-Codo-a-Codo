@@ -126,7 +126,7 @@ y “print_persona”. Luego crear dos objetos del tipo Persona e imprimirlos po
 # print(persona1.es_mayor_que(persona2))
 
 '''5) Agregarle un método estático “get_mayor” que reciba dos objetos Persona y devuelva el de edad mayor.'''
-# class Persona:
+#class Persona:
 
 # #Ejercicio 2
 #     def __init__(self, nombre, edad):
@@ -167,11 +167,12 @@ y “print_persona”. Luego crear dos objetos del tipo Persona e imprimirlos po
 #         return rta
 
 # #Ejercicio 5
+#     @staticmethod
 #     def get_mayor(self, persona):
 #         if self.__edad > persona.__edad:
-#             rta = f'La edad de la persona mayor de las dos comparadas, es {self.__edad} años'
+#             rta = f'{self.__nombre} es mayor'
 #         elif self.__edad < persona.__edad:
-#             rta = f'La edad de la persona mayor de las dos comparadas, es {persona.__edad} años'
+#             rta = f'{persona.__nombre} es mayor'
 #         else:
 #             rta = f'Ambas personas tienen la misma edad, {self.__edad} años'
 #         return rta
@@ -184,7 +185,7 @@ y “print_persona”. Luego crear dos objetos del tipo Persona e imprimirlos po
 # print(persona1)
 # print(persona2)
 # print(persona1.es_mayor_que(persona2))
-# print(persona1.get_mayor(persona2))
+# print(Persona.get_mayor(persona1, persona2))  #así se usa un método estático
 
 '''6) Realizar un programa que conste de una clase llamada Alumno que tenga como atributos el nombre y la nota 
 del alumno. Definir los métodos para inicializar sus atributos, imprimirlos y mostrar un mensaje con el resultado 

@@ -10,20 +10,13 @@ from class_agenda import Agenda
 def __main__():
 
     agenda1 = Agenda()
-    print(agenda1)       # imprime los datos de memoria del objeto
-
-    contacto1 = Contacto('Cintia', 3562408801, 'cintiagoddio@gmail.com')
-    print(contacto1)     #imprime el str del contacto
-
-    agenda1.anadir_contacto(contacto1)   #imprime contacto añadido
-
-    agenda1.buscar_contacto('Cintia') # No funciona y no entiendo por qué...
-
-    print(agenda1.lista_contactos) #no entiendo por qué no imprime la lista como tal sino los datos de la memoria del objeto...
-    agenda1.listar_contactos()   #imprime la lista
-    agenda1.cerrar_agenda() 
-         #imprime la agenda fue cerrada
-
+    #print(agenda1)       # imprime los datos de memoria del objeto
+    agenda1.anadir_contacto('Cintia', 3562408801, 'cintiagoddio@gmail.com') #imprime "Contacto añadido"
+    agenda1.anadir_contacto('Juan', 35165879, 'juan@gmail.com')  #imprime "Contacto añadido"
+    agenda1.buscar_contacto('Cintia') #imprime todos los datos del contacto buscado
+    agenda1.listar_contactos() #imprime los datos de los contactos añadidos
+    agenda1.cerrar_agenda()   #imprime la agenda fue cerrada
+         
 if __name__=='__main__':
     __main__()
 
